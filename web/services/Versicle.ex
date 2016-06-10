@@ -21,8 +21,9 @@ defmodule Web.Versicle do
  end
 
 def init(:ok) do
-  src = "./bible.yaml" |> Path.expand(__DIR__)
+  src = "bible.yaml" |> Path.expand(__DIR__)
   table = src |> YamlElixir.read_from_file
+  IO.puts src
   keys = Map.keys(table)
   len = length(keys)
   {:ok ,[src, len, keys, table]}
