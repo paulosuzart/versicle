@@ -14,6 +14,9 @@ config :web, Web.Endpoint,
   pubsub: [name: Web.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :web, Web.Versicle,
+  bible: "./bible.yaml"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

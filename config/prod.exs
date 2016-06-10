@@ -16,6 +16,9 @@ config :web, Web.Endpoint,
   url: [host: System.get_env("HOSTNAME"), port: 80],
   cache_static_manifest: "priv/static/manifest.json"
 
+config: :web, Web.Versicle,
+  bible: "/app/web/services/bible.yaml"
+
 # Do not print debug messages in production
 config :logger, level: :info
 
